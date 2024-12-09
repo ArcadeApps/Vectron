@@ -1,0 +1,51 @@
+server_name: 'dev-test'
+report_stats: false
+media_store_path: '/data/media_store'
+serve_server_wellknown: true
+public_baseurl: https://localhost/
+database:
+  name: psycopg2
+  args:
+    user: 'synapse'
+    password: 'changeme'
+    dbname: 'synapse'
+    host: 'db'
+listeners:
+  - port: 8448
+    tls: true
+    type: 'http'
+    resources:
+      - names: [client, federation]
+tls_certificate_path: '/data/localhost.pem'
+tls_private_key_path: '/data/localhost-key.pem'
+
+#registration:
+enable_registration: true
+macaroon_secret_key: "beJOnRa1yayfy^B#OYLyy^vWaRmUJ$@GbpJC@&XR$uqiD5bsTN&2OwW5fdUiPNyoI4afKoDEGcs855$%SjpnOc#opqEDf!c*^UYWB2DjeJc*#!ye%3QvSpGNnHJvG2hu"
+registrations_require_3pid:
+  - email
+email:
+  smtp_host: mail
+  smtp_port: 1025
+  force_tls: false
+  require_transport_security: false
+  enable_tls: false
+  notif_from: "Your Friendly %(app)s homeserver <noreply@localhost>"
+  app_name: my_branded_matrix_server
+  enable_notifs: true
+  notif_for_new_users: false
+  client_base_url: "http://localhost/riot"
+  validation_token_lifetime: 15m
+  invite_client_location: https://app.element.io
+
+  subjects:
+    message_from_person_in_room: "[%(app)s] You have a message on %(app)s from %(person)s in the %(room)s room..."
+    message_from_person: "[%(app)s] You have a message on %(app)s from %(person)s..."
+    messages_from_person: "[%(app)s] You have messages on %(app)s from %(person)s..."
+    messages_in_room: "[%(app)s] You have messages on %(app)s in the %(room)s room..."
+    messages_in_room_and_others: "[%(app)s] You have messages on %(app)s in the %(room)s room and others..."
+    messages_from_person_and_others: "[%(app)s] You have messages on %(app)s from %(person)s and others..."
+    invite_from_person_to_room: "[%(app)s] %(person)s has invited you to join the %(room)s room on %(app)s..."
+    invite_from_person: "[%(app)s] %(person)s has invited you to chat on %(app)s..."
+    password_reset: "[%(server_name)s] Password reset"
+    email_validation: "[%(server_name)s] Validate your email"
