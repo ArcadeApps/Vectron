@@ -5,6 +5,7 @@ namespace Vectron.UI;
 public class AppViewLocator : IViewLocator
 {
     private readonly ViewLocator _locator;
+    public AppViewLocator(){}
     public AppViewLocator(ViewLocator viewLocator)
     {
         _locator = viewLocator;
