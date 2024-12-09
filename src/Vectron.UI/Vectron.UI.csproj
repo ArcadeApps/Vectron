@@ -33,6 +33,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\Vectron.Core\Vectron.Core.csproj" />
+      <ProjectReference Include="..\Vectron.Core\Vectron.Core.csproj" />
     </ItemGroup>
 </Project>

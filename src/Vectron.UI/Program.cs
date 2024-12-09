@@ -31,7 +31,7 @@ sealed class Program
                 .WithInterFont().LogToTrace().UseReactiveUI().SetupWithClassicDesktopLifetime(args))
             .ConfigureServices((host, services) =>
             {
-                services.AddServerDiscovery();
+                services.AddServerDiscovery("https://localhost");
                 services
                     .AddSingleton<ViewLocator>()
                     .AddSingleton<MainWindowViewModel>()
@@ -69,7 +69,7 @@ sealed class Program
                 .WithInterFont().LogToTrace().UseReactiveUI().SetupWithClassicDesktopLifetime([]))
             .ConfigureServices((host, services) =>
             {
-                services.AddServerDiscovery();
+                services.AddServerDiscovery("https://localhost");
                 services
                     .AddSingleton<ViewLocator>()
                     .AddSingleton<MainWindowViewModel>();
