@@ -7,6 +7,6 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddServerDiscovery();
+        services.AddServerDiscovery("https://matrix.org/");
     }
 }

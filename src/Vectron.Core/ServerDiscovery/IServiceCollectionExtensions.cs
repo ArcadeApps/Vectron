@@ -8,10 +8,12 @@ namespace Vectron.Core.ServerDiscovery;
 
 public static class IServiceCollectionExtensions
 {
-    public static IServiceCollection AddServerDiscovery(this IServiceCollection services)
+    public static IServiceCollection AddServerDiscovery(this IServiceCollection services, string matrixServerUrl)
     {
-        services.AddRefitClient<IServerDiscoveryApi>();
-        services.AddRefitClient<IRegisterApi>();
+        if (!Uri.TryCreate(matrixServerUrl, UriKind.RelativeOrAbsolute, out var uri)) return services;
+        services.AddRefitClient<IServerDiscoveryApi>().ConfigureHttpClient(c => c.BaseAddress = uri);
+        services.AddRefitClient<IRegisterApi>().ConfigureHttpClient(c => c.BaseAddress = uri);
+
         return services;
     }
 }
