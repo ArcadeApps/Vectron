@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectron.Core", "src\Vectron.Core\Vectron.Core.csproj", "{72BC368E-B790-4B84-98B2-E1E2C210CEB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectron.UI", "src\Vectron.UI\Vectron.UI.csproj", "{ECC0246C-37E7-465A-8ACD-0C34A341A832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectron.Core.Tests", "tests\Vectron.Core.Tests\Vectron.Core.Tests.csproj", "{453A0DBA-D268-41EE-9EFB-7D2CFCBB5676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72BC368E-B790-4B84-98B2-E1E2C210CEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BC368E-B790-4B84-98B2-E1E2C210CEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BC368E-B790-4B84-98B2-E1E2C210CEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BC368E-B790-4B84-98B2-E1E2C210CEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC0246C-37E7-465A-8ACD-0C34A341A832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC0246C-37E7-465A-8ACD-0C34A341A832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC0246C-37E7-465A-8ACD-0C34A341A832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC0246C-37E7-465A-8ACD-0C34A341A832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453A0DBA-D268-41EE-9EFB-7D2CFCBB5676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453A0DBA-D268-41EE-9EFB-7D2CFCBB5676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453A0DBA-D268-41EE-9EFB-7D2CFCBB5676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453A0DBA-D268-41EE-9EFB-7D2CFCBB5676}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

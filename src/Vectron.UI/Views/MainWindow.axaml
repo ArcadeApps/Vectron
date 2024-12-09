@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:app="using:Vectron.UI"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Vectron.UI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Vectron.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Vectron.UI">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+        <rxui:RoutedViewHost.DefaultContent>
+            <TextBlock Text="Default content"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+        </rxui:RoutedViewHost.DefaultContent>
+        <rxui:RoutedViewHost.ViewLocator>
+            <!-- See AppViewLocator.cs section below -->
+            <app:AppViewLocator />
+        </rxui:RoutedViewHost.ViewLocator>
+    </rxui:RoutedViewHost>
+   <!-- <Grid RowDefinitions="32,*">
+        <Menu IsEnabled="{Binding !IsBusy}">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Test..."/>
+            </MenuItem>
+        </Menu>
+        
+    </Grid>-->
+
+</Window>
